@@ -23,11 +23,9 @@ kind: Service
 metadata:
   name: wil-service
 spec:
-  type: ClusterIP
   selector:
     app: wil
   ports:
-    - name: http
-      port: 8888
+    - protocol: TCP
+      port: 8080
       targetPort: 8888
-      protocol: TCP
